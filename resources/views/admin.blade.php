@@ -15,7 +15,7 @@
                         </div>
                     @endif
 
-                    You are logged in as <strong>Admin</strong>
+                        <a href="{{ route('admin.list') }}">List of Admin</a>
                 </div>
             </div>
         </div>

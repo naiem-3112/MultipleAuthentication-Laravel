@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Admin;
 
 class AdminController extends Controller
 {
@@ -25,4 +26,9 @@ class AdminController extends Controller
     {
         return view('admin');
     }
+    public function list(){
+        $admins = Admin::all();
+        return view('adminList', compact('admins'));
+    }
+
 }

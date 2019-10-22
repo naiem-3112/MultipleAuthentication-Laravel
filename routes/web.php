@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -24,4 +26,9 @@ Route::prefix('admin')->group(function () {
     Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
     Route::get('/', 'AdminController@index')->name('admin.dashboard');
     Route::get('/logout', 'Auth\AdminLoginController@logout')->name('admin.logout');
+    Route::get('/list', 'AdminController@list')->name('admin.list');
+    Route::get('/create', 'AdminController@create')->name('create.admin');
+    Route::get('/create', 'AdminController@edit')->name('edit.admin');
+    Route::get('/create', 'AdminController@delete')->name('delete.admin');
+
 });
