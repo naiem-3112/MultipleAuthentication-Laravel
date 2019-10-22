@@ -9,6 +9,7 @@
                         <thead>
                         <tr>
                             <th>Name</th>
+                            <th>Permission For</th>
                             <th>Action</th>
                         </tr>
                         </thead>
@@ -16,6 +17,7 @@
                         @foreach($permissions as $permission)
                             <tr>
                                 <td>{{ $permission->name }}</td>
+                                <td>{{ $permission->for }}</td>
                                 <td>
                                     <a href="{{ route('permission.edit',$permission->id) }}"><button class="btn btn-primary btn-sm">edit</button></a>
                                     <a href="{{ route('permission.destroy',$permission->id) }}"><button class="btn btn-danger btn-sm">delete</button></a>

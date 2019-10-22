@@ -42,10 +42,12 @@ class PermissionController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-           'name' => 'required|unique:permissions'
+           'name' => 'required|unique:permissions',
+            'for' => 'required'
         ]);
         $permission = new Permission();
         $permission->name = $request->name;
+        $permission->for = $request->for;
         $permission->save();
         return redirect('permission');
     }
@@ -87,6 +89,7 @@ class PermissionController extends Controller
         ]);
         $permission = Permission::find($id);
         $permission->name = $request->name;
+        $permission->for = $request->for;
         $permission->save();
         return redirect('permission');
     }
