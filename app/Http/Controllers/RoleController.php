@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Role;
 
 use Illuminate\Http\Request;
@@ -26,7 +27,7 @@ class RoleController extends Controller
         $role = new Role();
         $role->name = $request->name;
         $role->save();
-        return redirect('show');
+        return redirect('role_show');
     }
 
     public function create()
@@ -55,6 +56,6 @@ class RoleController extends Controller
         $role = Role::find($id);
         $role->name = $request->name;
         $role->save();
-        return redirect('show');
+        return redirect('role_show');
     }
 }

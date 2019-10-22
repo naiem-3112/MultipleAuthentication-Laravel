@@ -39,7 +39,19 @@ class AdminController extends Controller
     public function edit(){
 
     }
-    public function show(){
+    public function store(Request $request){
+        /*$this->validate($request, [
+           'name' => 'required',
+            'email' => 'required|unique:admins',
+           'title' => 'required',
+           'role' => 'required'
+        ]);
+        $admin = new Admin();
+        $admin->name = $request->name;
+        $admin->email = $request->email;
+        $admin->title = $request->title;
+        $admin->save();*/
+
 
     }
 
