@@ -57,7 +57,7 @@
                             </div>
                         </form>
                         <a href="{{ route('admin.list') }}">Back</a>
-                        <a href="{{ route('admin.role') }}">Create Role</a>
+
                     </div>
                 </div>
             </div>

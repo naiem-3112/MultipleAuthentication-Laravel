@@ -16,6 +16,9 @@
                     @endif
 
                         <a href="{{ route('admin.list') }}">List of Admin</a>
+                        <a href="{{ route('role.create') }}">Create Role</a>
+                        <a href="{{ route('role.show') }}">List of Role</a>
+
                 </div>
             </div>
         </div>
