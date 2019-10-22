@@ -27,8 +27,8 @@ Route::prefix('admin')->group(function () {
     Route::get('/', 'AdminController@index')->name('admin.dashboard');
     Route::get('/logout', 'Auth\AdminLoginController@logout')->name('admin.logout');
     Route::get('/list', 'AdminController@list')->name('admin.list');
-    Route::get('/create', 'AdminController@create')->name('create.admin');
-    Route::get('/create', 'AdminController@edit')->name('edit.admin');
-    Route::get('/create', 'AdminController@delete')->name('delete.admin');
+    Route::get('/create', 'AdminController@create')->name('admin.create');
+    Route::get('/edit/{id}', 'AdminController@edit')->name('admin.edit');
+    Route::get('/delete/{id}', 'AdminController@delete')->name('admin.delete');
 
 });

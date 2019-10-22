@@ -30,5 +30,14 @@ class AdminController extends Controller
         $admins = Admin::all();
         return view('adminList', compact('admins'));
     }
+    public function create(){
+        return view('create');
+    }
+    public function edit(){
+
+    }
+    public function show(){
+
+    }
 
 }
