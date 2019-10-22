@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Role;
 
 use Illuminate\Http\Request;
 use App\Admin;
@@ -32,7 +33,8 @@ class AdminController extends Controller
         return view('adminList', compact('admins'));
     }
     public function create(){
-        return view('create');
+        $roles = Role::all();
+        return view('create', compact('roles'));
     }
     public function edit(){
 

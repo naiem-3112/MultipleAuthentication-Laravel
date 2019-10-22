@@ -12,41 +12,46 @@
 
                             <div class="form-group">
                                 <label for="name">Name</label>
-
                                 <div>
                                     <input type="text" class="form-control" name="name" value="{{ old('name') }}">
                                 </div>
-
                             </div>
+
                             <div class="form-group">
                                 <label for="email">Email</label>
                                 <div>
                                     <input type="email" class="form-control" name="email" value="{{ old('email') }}">
                                 </div>
-
                             </div>
+
                             <div class="form-group">
                                 <label for="password">Password</label>
-
                                 <div>
                                     <input type="password" class="form-control" name="password">
                                 </div>
                             </div>
+
                             <div class="form-group">
                                 <label for="confirmpassword">Confirm Password</label>
-
                                 <div>
                                     <input id="password-confirm" type="password" class="form-control"
                                            name="password_confirmation">
                                 </div>
                             </div>
+
                             <div class="form-group">
-                                <label for="role">Assign Role</label>
-                                <select name="role" class="form-control">
-                                    <option value="0">Admin</option>
-                                    <option value="1">Leader</option>
-                                    <option value="3">General</option>
-                                </select>
+                                <label>Assign Role</label>
+                                <div class="row">
+                                    @foreach($roles as $role)
+                                        <div class="col-lg-3">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" name="role[]" value="{{ $role->id }}">{{ $role->name }}
+                                                </label>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+
                             </div>
                             <div class="form-group row mb-0">
                                 <div class="col-md-6 offset-md-4">
@@ -56,6 +61,7 @@
                                 </div>
                             </div>
                         </form>
+
                         <a href="{{ route('admin.list') }}">Back</a>
 
                     </div>
