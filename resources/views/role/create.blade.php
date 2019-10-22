@@ -23,7 +23,7 @@
                                     @foreach($permissions as $permission)
                                         @if($permission->for == 'role')
                                             <div class="checkbox">
-                                                <input type="checkbox" value="">{{ $permission->name }}
+                                                <input type="checkbox" name="permission[]" value="">{{ $permission->name }}
                                             </div>
                                         @endif
                                     @endforeach
@@ -33,7 +33,7 @@
                                     @foreach($permissions as $permission)
                                         @if($permission->for == 'user')
                                             <div class="checkbox">
-                                                <input type="checkbox" value="">{{ $permission->name }}
+                                                <input type="checkbox" name="permission[]" value="">{{ $permission->name }}
                                             </div>
                                         @endif
                                     @endforeach
@@ -43,14 +43,12 @@
                                     @foreach($permissions as $permission)
                                         @if($permission->for == 'other')
                                             <div class="checkbox">
-                                                <input type="checkbox" value="">{{ $permission->name }}
+                                                <input type="checkbox" name="permission[]" value="">{{ $permission->name }}
                                             </div>
                                         @endif
                                     @endforeach
                                 </div>
-
                             </div>
-
                             <div class="form-group row mb-0">
                                 <div>
                                     <button type="submit" class="btn btn-success btn-sm">

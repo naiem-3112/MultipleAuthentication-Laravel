@@ -18,6 +18,38 @@
                                     <input type="text" class="form-control" name="name" value="{{ $role->name }}">
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <label for="name">Role Permission</label>
+                                    @foreach($permissions as $permission)
+                                        @if($permission->for == 'role')
+                                            <div class="checkbox">
+                                                <input type="checkbox" name="permission[]" value="{{ $permission->id }}">{{ $permission->name }}
+                                            </div>
+                                        @endif
+                                    @endforeach
+                                </div>
+                                <div class="col-lg-4">
+                                    <label for="name">User permission</label>
+                                    @foreach($permissions as $permission)
+                                        @if($permission->for == 'user')
+                                            <div class="checkbox">
+                                                <input type="checkbox" name="permission[]" value="{{ $permission->id }}">{{ $permission->name }}
+                                            </div>
+                                        @endif
+                                    @endforeach
+                                </div>
+                                <div class="col-lg-4">
+                                    <label for="name">Other permission</label>
+                                    @foreach($permissions as $permission)
+                                        @if($permission->for == 'other')
+                                            <div class="checkbox">
+                                                <input type="checkbox" name="permission[]" value="{{ $permission->id }}">{{ $permission->name }}
+                                            </div>
+                                        @endif
+                                    @endforeach
+                                </div>
+                            </div>
 
                             <div class="form-group row mb-0">
                                 <div class="col-md-6 offset-md-4">

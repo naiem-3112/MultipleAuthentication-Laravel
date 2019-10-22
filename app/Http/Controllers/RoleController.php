@@ -50,9 +50,13 @@ class RoleController extends Controller
         return back();
     }
     public function edit($id){
-        return view('role.edit')->with(['role'=>Role::find($id)]);
+        $permissions = Permission::all();
+        $role = Role::find($id);
+        return view('role.edit', compact('permissions', 'role'));
     }
+
     public function update(Request $request, $id){
+        return $request->all();
         $this->validate($request, [
            'name' => 'required'
         ]);

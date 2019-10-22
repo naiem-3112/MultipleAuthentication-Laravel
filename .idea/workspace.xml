@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="fb249595-6182-4afd-8725-0ca685e0deb1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PermissionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PermissionController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RoleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RoleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Permission.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Permission.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_22_094419_create_permissions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_22_094419_create_permissions_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/permission/permissionCreate.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/permission/permissionCreate.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/permission/permissionShow.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/permission/permissionShow.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/role/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/role/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/role/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/role/edit.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -177,7 +173,7 @@
       <workItem from="1571652466045" duration="6119000" />
       <workItem from="1571716232499" duration="633000" />
       <workItem from="1571716868128" duration="253000" />
-      <workItem from="1571717402541" duration="28624000" />
+      <workItem from="1571717402541" duration="30368000" />
     </task>
     <servers />
   </component>
