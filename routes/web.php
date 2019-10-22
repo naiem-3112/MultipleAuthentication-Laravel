@@ -30,5 +30,5 @@ Route::prefix('admin')->group(function () {
     Route::get('/create', 'AdminController@create')->name('admin.create');
     Route::get('/edit/{id}', 'AdminController@edit')->name('admin.edit');
     Route::get('/delete/{id}', 'AdminController@delete')->name('admin.delete');
-
 });
+Route::resource('/role', 'RoleController');
