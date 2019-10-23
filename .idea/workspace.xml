@@ -4,6 +4,7 @@
     <list default="true" id="fb249595-6182-4afd-8725-0ca685e0deb1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RoleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RoleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Role.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/role/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/role/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/role/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/role/edit.blade.php" afterDir="false" />
     </list>
@@ -122,7 +123,7 @@
   <component name="ProjectId" id="1SUyqMMPcuEdksMGnqPGyuzmXbk" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -173,7 +174,10 @@
       <workItem from="1571652466045" duration="6119000" />
       <workItem from="1571716232499" duration="633000" />
       <workItem from="1571716868128" duration="253000" />
-      <workItem from="1571717402541" duration="30368000" />
+      <workItem from="1571717402541" duration="30495000" />
+      <workItem from="1571803683674" duration="608000" />
+      <workItem from="1571804345911" duration="14000" />
+      <workItem from="1571804362900" duration="2024000" />
     </task>
     <servers />
   </component>

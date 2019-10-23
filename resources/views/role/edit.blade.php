@@ -24,7 +24,13 @@
                                     @foreach($permissions as $permission)
                                         @if($permission->for == 'role')
                                             <div class="checkbox">
-                                                <input type="checkbox" name="permission[]" value="{{ $permission->id }}">{{ $permission->name }}
+                                                <input type="checkbox" name="permission[]" value="{{ $permission->id }}"
+                                                @foreach($role->permissions as $role_permit)
+                                                    @if($role_permit->id == $permission->id)
+                                                        checked
+                                                        @endif
+                                                    @endforeach
+                                                >{{ $permission->name }}
                                             </div>
                                         @endif
                                     @endforeach
@@ -34,7 +40,13 @@
                                     @foreach($permissions as $permission)
                                         @if($permission->for == 'user')
                                             <div class="checkbox">
-                                                <input type="checkbox" name="permission[]" value="{{ $permission->id }}">{{ $permission->name }}
+                                                <input type="checkbox" name="permission[]" value="{{ $permission->id }}"
+                                                       @foreach($role->permissions as $role_permit)
+                                                       @if($role_permit->id == $permission->id)
+                                                       checked
+                                                    @endif
+                                                    @endforeach
+                                                >{{ $permission->name }}
                                             </div>
                                         @endif
                                     @endforeach
@@ -44,7 +56,13 @@
                                     @foreach($permissions as $permission)
                                         @if($permission->for == 'other')
                                             <div class="checkbox">
-                                                <input type="checkbox" name="permission[]" value="{{ $permission->id }}">{{ $permission->name }}
+                                                <input type="checkbox" name="permission[]" value="{{ $permission->id }}"
+                                                       @foreach($role->permissions as $role_permit)
+                                                       @if($role_permit->id == $permission->id)
+                                                       checked
+                                                    @endif
+                                                    @endforeach
+                                                >{{ $permission->name }}
                                             </div>
                                         @endif
                                     @endforeach

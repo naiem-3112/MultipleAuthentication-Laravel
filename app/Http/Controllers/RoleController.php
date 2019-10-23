@@ -56,13 +56,14 @@ class RoleController extends Controller
     }
 
     public function update(Request $request, $id){
-        return $request->all();
         $this->validate($request, [
            'name' => 'required'
+
         ]);
         $role = Role::find($id);
         $role->name = $request->name;
         $role->save();
+        $role->permissions()->sync($request->permission);
         return redirect('role_show');
     }
 }
