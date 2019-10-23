@@ -11,17 +11,26 @@
                             <th>Name</th>
                             <th>Email</th>
                             <th>Title</th>
-                            <th>status</th>
+                            <th>Status</th>
+                            <th>Assigned Roles</th>
                             <th>Action</th>
                         </tr>
                         </thead>
                         <tbody>
+
                         @foreach($admins as $admin)
                             <tr>
                                 <td>{{ $admin->name }}</td>
                                 <td>{{ $admin->email }}</td>
                                 <td>{{ $admin->title }}</td>
                                 <td>{{ $admin->status }}</td>
+
+                                <td>
+                                    @foreach($admin->roles as $role)
+                                    {{ $role->name." || " }}
+                                    @endforeach
+
+                                </td>
                                 <td>
                                     <a href="{{ route('admin.edit',$admin->id) }}"><button class="btn btn-primary btn-sm">edit</button></a>
                                     <a href="{{ route('admin.delete',$admin->id) }}"><button class="btn btn-danger btn-sm">delete</button></a>

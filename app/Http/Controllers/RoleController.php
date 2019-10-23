@@ -29,6 +29,7 @@ class RoleController extends Controller
         $role = new Role();
         $role->name = $request->name;
         $role->save();
+        $role->permissions()->sync($request->permission);
         return redirect('role_show');
     }
 

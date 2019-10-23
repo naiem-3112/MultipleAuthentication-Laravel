@@ -52,7 +52,8 @@ class AdminController extends Controller
             'status' => 'nullable'
         ]);
         $request['password'] = bcrypt($request->password);
-        Admin::create($request->all());
+        $admin =Admin::create($request->all());
+        $admin->roles()->sync($request->role);
         return redirect('admin/list');
     }
 
@@ -78,6 +79,7 @@ class AdminController extends Controller
         $adminfind->title = $request->title;
         $adminfind->status = $request->status;
         $adminfind->update();
+        $adminfind->roles()->sync($request->role);
         return redirect('admin/list');
     }
 
