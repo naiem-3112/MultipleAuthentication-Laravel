@@ -3,15 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="fb249595-6182-4afd-8725-0ca685e0deb1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PermissionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PermissionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_21_044829_create_admins_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_21_044829_create_admins_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/adminEdit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/adminEdit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/adminShow.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/adminShow.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/adminList.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminList.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/create.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/permission/permissionCreate.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/permission/permissionCreate.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/permission/permissionEdit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/permission/permissionEdit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/permission/permissionShow.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/permission/permissionShow.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -186,7 +181,7 @@
       <workItem from="1571717402541" duration="30495000" />
       <workItem from="1571803683674" duration="608000" />
       <workItem from="1571804345911" duration="14000" />
-      <workItem from="1571804362900" duration="17372000" />
+      <workItem from="1571804362900" duration="21150000" />
     </task>
     <servers />
   </component>

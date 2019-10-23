@@ -11,6 +11,7 @@
                             <th>Name</th>
                             <th>Email</th>
                             <th>Title</th>
+                            <th>status</th>
                             <th>Action</th>
                         </tr>
                         </thead>
@@ -20,6 +21,7 @@
                                 <td>{{ $admin->name }}</td>
                                 <td>{{ $admin->email }}</td>
                                 <td>{{ $admin->title }}</td>
+                                <td>{{ $admin->status }}</td>
                                 <td>
 
                                     <a href="{{ route('admin.edit',$admin->id) }}">

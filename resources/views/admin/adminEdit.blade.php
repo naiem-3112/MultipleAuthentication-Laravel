@@ -7,47 +7,33 @@
                     <div class="card-header">{{ __('Edit Admin') }}</div>
 
                     <div class="card-body">
-                        <form action="{{ route('admin.store') }}" method="post">
+                        <form action="{{ route('admin.update', $admin->id) }}" method="post">
                             @csrf
                             <div class="form-group">
                                 <label for="name">Name</label>
                                 <div>
-                                    <input type="text" class="form-control" name="name" value="{{ old('name') }}">
+                                    <input type="text" class="form-control" name="name" value="{{ $admin->name }}">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="email">Email</label>
                                 <div>
-                                    <input type="email" class="form-control" name="email" value="{{ old('email') }}">
+                                    <input type="email" class="form-control" name="email" value="{{ $admin->email }}">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="title">Title</label>
                                 <div>
-                                    <input type="text" class="form-control" name="title" value="{{ old('title') }}">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="password">Password</label>
-                                <div>
-                                    <input type="password" class="form-control" name="password">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="password_confirmation">Confirm Password</label>
-                                <div>
-                                    <input id="password_confirmation" type="password" class="form-control"
-                                           name="password">
+                                    <input type="text" class="form-control" name="title" value="{{ $admin->title }}">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="status">Status</label>
 
                                 <div class="checkbox">
-                                    <label><input type="checkbox" name="status" @if(old('status')==1) checked @endif value="1">Status</label>
+                                    <label><input type="checkbox" name="status" @if($admin->status ==1) checked
+                                                  @endif value="1">Status</label>
 
                                 </div>
                             </div>

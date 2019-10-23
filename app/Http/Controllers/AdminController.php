@@ -42,13 +42,6 @@ class AdminController extends Controller
         return view('admin.adminCreate', compact('roles'));
     }
 
-    public function edit()
-    {
-        $roles = Role::all();
-        return view('admin.adminEdit', compact('roles'));
-
-    }
-
     public function store(Request $request)
     {
         $this->validate($request, [
@@ -59,9 +52,37 @@ class AdminController extends Controller
             'status' => 'nullable'
         ]);
         $request['password'] = bcrypt($request->password);
-       Admin::create($request->all());
+        Admin::create($request->all());
         return redirect('admin/list');
+    }
+
+    public function edit($id)
+    {
+        $roles = Role::all();
+        $admin=Admin::find($id);
+        return view('admin.adminEdit', compact('admin','roles'));
 
     }
+    public function update(Request $request, $id){
+        $this->validate($request, [
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|',
+            'title' => 'required',
+            'status' => 'nullable',
+        ]);
+        $adminfind = Admin::find($id);
+        $adminfind->name = $request->name;
+        $adminfind->email = $request->email;
+        $adminfind->title = $request->title;
+        $adminfind->status = $request->status;
+        $adminfind->update();
+        return redirect('admin/list');
+    }
+
+    public function delete($id){
+        Admin::find($id)->delete();
+        return back();
+    }
+
 
 }
