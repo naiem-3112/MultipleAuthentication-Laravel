@@ -15,7 +15,7 @@ class Role extends Model
     }
 
 
-    /*public function admins(){
+    public function admins(){
         return $this->belongsToMany('App\Admin');
-    }*/
+    }
 }
