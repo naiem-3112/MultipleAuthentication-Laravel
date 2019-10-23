@@ -39,8 +39,7 @@
                             <div class="form-group">
                                 <label for="password_confirmation">Confirm Password</label>
                                 <div>
-                                    <input id="password_confirmation" type="password" class="form-control"
-                                           name="password_confirmation">
+                                    <input id="password_confirmation" type="password" class="form-control" name="password_confirmation">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -57,8 +56,7 @@
                                     @foreach($roles as $role)
                                         <div class="col-lg-3">
                                             <div class="checkbox">
-                                                <label><input type="checkbox" name="role[]"
-                                                              value="{{ $role->id }}">{{ $role->name }}
+                                                <label><input type="checkbox" name="role[]" value="{{ $role->id }}">{{ $role->name }}
                                                 </label>
                                             </div>
                                         </div>
@@ -67,10 +65,7 @@
 
                             </div>
                             <div class="form-group row mb-0">
-                                <div class="col-md-6 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">
-                                        {{ __('Create') }}
-                                    </button>
+                                <div class="col-md-6 offset-md-4"><button type="submit" class="btn btn-primary">{{ __('Create') }}</button>
                                 </div>
                             </div>
                         </form>

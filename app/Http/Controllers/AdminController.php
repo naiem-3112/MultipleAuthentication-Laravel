@@ -59,11 +59,13 @@ class AdminController extends Controller
     public function edit($id)
     {
         $roles = Role::all();
-        $admin=Admin::find($id);
-        return view('admin.adminEdit', compact('admin','roles'));
+        $admin = Admin::find($id);
+        return view('admin.adminEdit', compact('admin', 'roles'));
 
     }
-    public function update(Request $request, $id){
+
+    public function update(Request $request, $id)
+    {
         $this->validate($request, [
             'name' => 'required|string|max:255',
             'email' => 'required|email|',
@@ -79,10 +81,9 @@ class AdminController extends Controller
         return redirect('admin/list');
     }
 
-    public function delete($id){
+    public function delete($id)
+    {
         Admin::find($id)->delete();
         return back();
     }
-
-
 }

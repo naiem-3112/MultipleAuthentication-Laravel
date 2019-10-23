@@ -23,21 +23,14 @@
                                 <td>{{ $admin->title }}</td>
                                 <td>{{ $admin->status }}</td>
                                 <td>
-
-                                    <a href="{{ route('admin.edit',$admin->id) }}">
-                                        <button class="btn btn-primary btn-sm">edit</button>
-                                    </a>
-                                    <a href="{{ route('admin.delete',$admin->id) }}">
-                                        <button class="btn btn-danger btn-sm">delete</button>
-                                    </a>
+                                    <a href="{{ route('admin.edit',$admin->id) }}"><button class="btn btn-primary btn-sm">edit</button></a>
+                                    <a href="{{ route('admin.delete',$admin->id) }}"><button class="btn btn-danger btn-sm">delete</button></a>
                                 </td>
                             </tr>
                         @endforeach
                         </tbody>
                     </table>
-                    <a href="{{ route('admin.create') }}">
-                        <button class="btn btn-primary btn-sm">Create New Admin</button>
-                    </a>
+                    <a href="{{ route('admin.create') }}"><button class="btn btn-primary btn-sm">Create New Admin</button></a>
                     <a href="{{ route('admin.dashboard') }}">Back</a>
                 </div>
             </div>

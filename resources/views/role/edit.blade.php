@@ -22,7 +22,7 @@
                                 <div class="col-lg-4">
                                     <label for="name">Role Permission</label>
                                     @foreach($permissions as $permission)
-                                        @if($permission->for == 'role')
+                                        @if($permission->for == 1)
                                             <div class="checkbox">
                                                 <input type="checkbox" name="permission[]" value="{{ $permission->id }}"
                                                 @foreach($role->permissions as $role_permit)
@@ -38,7 +38,7 @@
                                 <div class="col-lg-4">
                                     <label for="name">User permission</label>
                                     @foreach($permissions as $permission)
-                                        @if($permission->for == 'user')
+                                        @if($permission->for == 2)
                                             <div class="checkbox">
                                                 <input type="checkbox" name="permission[]" value="{{ $permission->id }}"
                                                        @foreach($role->permissions as $role_permit)
@@ -54,7 +54,7 @@
                                 <div class="col-lg-4">
                                     <label for="name">Other permission</label>
                                     @foreach($permissions as $permission)
-                                        @if($permission->for == 'other')
+                                        @if($permission->for == 3)
                                             <div class="checkbox">
                                                 <input type="checkbox" name="permission[]" value="{{ $permission->id }}"
                                                        @foreach($role->permissions as $role_permit)
