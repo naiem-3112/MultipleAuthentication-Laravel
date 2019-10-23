@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Permission;
+use App\Role;
 
 class PermissionController extends Controller
 {
@@ -30,7 +31,8 @@ class PermissionController extends Controller
      */
     public function create()
     {
-        return view('permission.permissionCreate');
+        $roles = Role::all();
+        return view('permission.permissionCreate', compact('roles'));
     }
 
     /**
@@ -71,8 +73,9 @@ class PermissionController extends Controller
      */
     public function edit($id)
     {
+        $roles = Role::all();
         $permission = Permission::find($id);
-        return view('permission.permissionEdit', compact('permission'));
+        return view('permission.permissionEdit', compact('permission', 'roles'));
     }
 
     /**

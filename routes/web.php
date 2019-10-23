@@ -28,9 +28,10 @@ Route::prefix('admin')->group(function () {
     Route::get('/', 'AdminController@index')->name('admin.dashboard');
     Route::get('/logout', 'Auth\AdminLoginController@logout')->name('admin.logout');
     Route::get('/list', 'AdminController@list')->name('admin.list');
-    Route::get('/create', 'AdminController@create')->name('admin.create');
-    Route::get('/edit/{id}', 'AdminController@edit')->name('admin.edit');
-    Route::get('/delete/{id}', 'AdminController@delete')->name('admin.delete');
+    Route::get('/admin_create', 'AdminController@create')->name('admin.create');
+    Route::post('/admin_store', 'AdminController@store')->name('admin.store');
+    Route::get('/admin_edit/{id}', 'AdminController@edit')->name('admin.edit');
+    Route::get('/admin_delete/{id}', 'AdminController@delete')->name('admin.delete');
 });
 
 //Role Routes..........

@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Role;
+
 
 use Illuminate\Http\Request;
 use App\Admin;
+use App\Role;
 
 class AdminController extends Controller
 {
@@ -28,30 +29,38 @@ class AdminController extends Controller
     {
         return view('admin');
     }
-    public function list(){
+
+    public function list()
+    {
         $admins = Admin::all();
         return view('adminList', compact('admins'));
     }
-    public function create(){
+
+    public function create()
+    {
         $roles = Role::all();
-        return view('create', compact('roles'));
+        return view('admin.adminCreate', compact('roles'));
     }
-    public function edit(){
+
+    public function edit()
+    {
+        $roles = Role::all();
+        return view('admin.adminEdit', compact('roles'));
 
     }
-    public function store(Request $request){
-        /*$this->validate($request, [
-           'name' => 'required',
-            'email' => 'required|unique:admins',
-           'title' => 'required',
-           'role' => 'required'
+
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:admins',
+            'title' => 'required',
+            'password' => 'required|min:3|confirmed',
+            'status' => 'nullable'
         ]);
-        $admin = new Admin();
-        $admin->name = $request->name;
-        $admin->email = $request->email;
-        $admin->title = $request->title;
-        $admin->save();*/
-
+        $request['password'] = bcrypt($request->password);
+       Admin::create($request->all());
+        return redirect('admin/list');
 
     }
 

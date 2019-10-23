@@ -17,6 +17,18 @@
                                     <input type="text" class="form-control" name="name" value="{{ $permission->name }}">
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <label for="for">Permission For</label>
+
+                                <div>
+                                    <select name="for" class="form-control">
+                                        <option selected disabled>select permission for</option>
+                                        @foreach($roles as $role)
+                                            <option value="{{ $role->id }}">{{ $role->name }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
 
                             <div class="form-group row mb-0">
                                 <div class="col-md-6 offset-md-4">

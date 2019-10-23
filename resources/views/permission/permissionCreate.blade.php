@@ -23,9 +23,9 @@
                                 <div>
                                     <select name="for" class="form-control">
                                         <option selected disabled>select permission for</option>
-                                        <option value="user">User</option>
-                                        <option value="role">Role</option>
-                                        <option value="other">Other</option>
+                                        @foreach($roles as $role)
+                                            <option value="{{ $role->id }}">{{ $role->name }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
