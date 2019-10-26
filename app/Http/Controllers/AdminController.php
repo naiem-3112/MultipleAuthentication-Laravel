@@ -67,12 +67,14 @@ class AdminController extends Controller
 
     public function update(Request $request, $id)
     {
+
         $this->validate($request, [
             'name' => 'required|string|max:255',
             'email' => 'required|email|',
             'title' => 'required',
-            'status' => 'nullable',
+
         ]);
+        $request->status? : $request['status']=0;
         $adminfind = Admin::find($id);
         $adminfind->name = $request->name;
         $adminfind->email = $request->email;

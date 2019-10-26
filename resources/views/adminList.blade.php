@@ -23,7 +23,7 @@
                                 <td>{{ $admin->name }}</td>
                                 <td>{{ $admin->email }}</td>
                                 <td>{{ $admin->title }}</td>
-                                <td>{{ $admin->status }}</td>
+                                <td>{{ $admin->status? "Active" : "Not Active" }}</td>
 
                                 <td>
                                     @foreach($admin->roles as $role)
